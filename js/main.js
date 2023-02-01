@@ -29,6 +29,14 @@ window.onload = function () {
       clearTimeout(popupTimer);
       popupTimer = setTimeout(displayPopup, timeOut);
     })
+    window.addEventListener("click", function (e) {
+      clearTimeout(popupTimer);
+      popupTimer = setTimeout(displayPopup, timeOut);
+    })
+    window.addEventListener("mouseover", function (e) {
+      clearTimeout(popupTimer);
+      popupTimer = setTimeout(displayPopup, timeOut);
+    })
   };
 
   const headerSliderInit = document.querySelector(".header-slider");
