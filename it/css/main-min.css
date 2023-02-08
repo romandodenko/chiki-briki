@@ -759,6 +759,8 @@ main:not(:last-child) {
 }
 
 .about__bottom {
+  position: relative;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -848,7 +850,8 @@ main:not(:last-child) {
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none;
-    padding: 0 10px
+    padding: 0 10px;
+    width: 160px !important;
   }
 }
 
@@ -2254,7 +2257,7 @@ main:not(:last-child) {
     -ms-flex: 0 0 100px;
     flex: 0 0 100px;
     height: 30px;
-    padding: 5px
+    padding: 2px
   }
 }
 
