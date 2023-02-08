@@ -2254,7 +2254,7 @@ main:not(:last-child) {
     -ms-flex: 0 0 100px;
     flex: 0 0 100px;
     height: 30px;
-    padding: 5px
+    padding: 2px
   }
 }
 
