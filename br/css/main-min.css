@@ -848,7 +848,8 @@ main:not(:last-child) {
     -webkit-box-flex: 0;
     -ms-flex: none;
     flex: none;
-    padding: 0 10px
+    padding: 0 10px;
+    width: 160px
   }
 }
 
