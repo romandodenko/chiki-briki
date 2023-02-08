@@ -759,6 +759,8 @@ main:not(:last-child) {
 }
 
 .about__bottom {
+  position: relative;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -849,7 +851,7 @@ main:not(:last-child) {
     -ms-flex: none;
     flex: none;
     padding: 0 10px;
-    width: 160px
+    width: 160px !important;
   }
 }
 
