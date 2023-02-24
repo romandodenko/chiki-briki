@@ -131,7 +131,7 @@ picture {
 }
 
 :root {
-  --active: #F63F00
+  --active: #0004f6
 }
 
 .container {
@@ -174,7 +174,7 @@ main {
 
 .header {
   padding: 15px 0;
-  background-color: #f63f00
+  background-color: #0004f6
 }
 
 @media (max-width:600px) {
@@ -206,18 +206,18 @@ main {
   object-position: center
 }
 
-.hero {
+.main {
   overflow: hidden
 }
 
-.hero__container {
+.main__container {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover
 }
 
-.hero__content {
+.main__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,25 +232,25 @@ main {
 }
 
 @media (max-width:600px) {
-  .hero__content {
+  .main__content {
     min-height: 299px;
     padding: 30px 0 40px 0
   }
 }
 
-.hero__descr {
+.main__descr {
   position: relative;
   z-index: 2;
   max-width: 320px
 }
 
 @media (max-width:600px) {
-  .hero__descr {
+  .main__descr {
     max-width: 194px
   }
 }
 
-.hero__title {
+.main__title {
   font-weight: 700;
   font-size: 60px;
   line-height: 55px;
@@ -259,35 +259,35 @@ main {
 }
 
 @media (max-width:600px) {
-  .hero__title {
+  .main__title {
     font-size: 40px;
     line-height: 35px
   }
 }
 
-.hero__title span {
+.main__title span {
   font-size: 26px;
   line-height: 45px
 }
 
 @media (max-width:600px) {
-  .hero__title span {
+  .main__title span {
     font-size: 16px;
     line-height: 35px
   }
 }
 
-.hero__title:not(:last-child) {
+.main__title:not(:last-child) {
   margin-bottom: 15px
 }
 
 @media (max-width:600px) {
-  .hero__title:not(:last-child) {
+  .main__title:not(:last-child) {
     margin-bottom: 10px
   }
 }
 
-.hero__link {
+.main__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,7 +303,7 @@ main {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #f63f00;
+  background-color: #0004f6;
   border: 1px solid #fff;
   border-radius: 9px;
   font-weight: 700;
@@ -312,13 +312,23 @@ main {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
+  -webkit-animation-name: anim;
+  animation-name: anim;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-box-shadow: 0 0 9px 4px #e2dcdc8a;
+  box-shadow: 0 0 9px 4px #e2dcdc8a;
   -webkit-transition: border-color .3s linear;
   -o-transition: border-color .3s linear;
   transition: border-color .3s linear
 }
 
 @media (max-width:600px) {
-  .hero__link {
+  .main__link {
     min-width: 163px;
     min-height: 27px;
     font-size: 10px;
@@ -326,24 +336,24 @@ main {
   }
 }
 
-.hero__link:active {
+.main__link:active {
   border-color: var(--active);
   -webkit-transition-duration: .1s;
   -o-transition-duration: .1s;
   transition-duration: .1s
 }
 
-.hero__link:not(:last-child) {
+.main__link:not(:last-child) {
   margin-bottom: 13px
 }
 
 @media (max-width:600px) {
-  .hero__link:not(:last-child) {
+  .main__link:not(:last-child) {
     margin-bottom: 10px
   }
 }
 
-.hero__list {
+.main__list {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -356,12 +366,12 @@ main {
 }
 
 @media (max-width:600px) {
-  .hero__list {
+  .main__list {
     gap: 9px
   }
 }
 
-.hero__item:nth-child(1) {
+.main__item:nth-child(1) {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 55px;
   flex: 0 0 55px;
@@ -369,7 +379,7 @@ main {
 }
 
 @media (max-width:600px) {
-  .hero__item:nth-child(1) {
+  .main__item:nth-child(1) {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 35px;
     flex: 0 0 35px;
@@ -377,13 +387,13 @@ main {
   }
 }
 
-.hero__item:nth-child(1) a {
+.main__item:nth-child(1) a {
   border-radius: 7px;
   overflow: hidden;
   border: 1px solid #fff
 }
 
-.hero__item:nth-child(2) {
+.main__item:nth-child(2) {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 155px;
   flex: 0 0 155px;
@@ -391,7 +401,7 @@ main {
 }
 
 @media (max-width:600px) {
-  .hero__item:nth-child(2) {
+  .main__item:nth-child(2) {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 104px;
     flex: 0 0 104px;
@@ -399,13 +409,13 @@ main {
   }
 }
 
-.hero__item-link {
+.main__item-link {
   display: block;
   width: 100%;
   height: 100%
 }
 
-.hero__item-link img {
+.main__item-link img {
   display: block;
   width: 100%;
   height: 100%;
@@ -415,7 +425,7 @@ main {
   object-position: center
 }
 
-.hero__vector {
+.main__vector {
   position: absolute;
   top: 0;
   right: 0;
@@ -425,13 +435,13 @@ main {
 }
 
 @media (max-width:600px) {
-  .hero__vector {
+  .main__vector {
     width: 342px;
     height: 350px
   }
 }
 
-.hero__vector img {
+.main__vector img {
   display: block;
   width: 100%;
   height: 100%;
@@ -441,29 +451,63 @@ main {
   object-position: center
 }
 
-.benefits {
+@-webkit-keyframes anim {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@keyframes anim {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+.say {
   position: relative;
   z-index: 2;
   margin-top: -23px
 }
 
 @media (max-width:600px) {
-  .benefits {
+  .say {
     margin-top: -17px
   }
 }
 
-.benefits:not(:last-child) {
+.say:not(:last-child) {
   margin-bottom: 30px
 }
 
 @media (max-width:600px) {
-  .benefits__container {
+  .say__container {
     padding: 0 5px
   }
 }
 
-.benefits__list {
+.say__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,26 +523,26 @@ main {
 }
 
 @media (max-width:600px) {
-  .benefits__list {
+  .say__list {
     gap: 10px 5px
   }
 }
 
-.benefits__item {
+.say__item {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 200px;
   flex: 0 0 200px
 }
 
 @media (max-width:600px) {
-  .benefits__item {
+  .say__item {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 123px;
     flex: 0 0 123px
   }
 }
 
-.benefits__top {
+.say__top {
   position: relative;
   width: 55px;
   height: 44px;
@@ -506,33 +550,33 @@ main {
 }
 
 @media (max-width:600px) {
-  .benefits__top {
+  .say__top {
     width: 42px;
     height: 33px
   }
 }
 
-.benefits__top:not(:last-child) {
+.say__top:not(:last-child) {
   margin-bottom: 15px
 }
 
 @media (max-width:600px) {
-  .benefits__top:not(:last-child) {
+  .say__top:not(:last-child) {
     margin-bottom: 10px
   }
 }
 
-.benefits__wrapper-icon {
+.say__wrapper-icon {
   width: 100%;
   height: 100%;
-  background-color: #f63f00;
+  background-color: #0004f6;
   border: 1px solid #000;
   -webkit-transform: skew(-10deg);
   -ms-transform: skew(-10deg);
   transform: skew(-10deg)
 }
 
-.benefits__icon {
+.say__icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -545,13 +589,13 @@ main {
 }
 
 @media (max-width:600px) {
-  .benefits__icon {
+  .say__icon {
     width: 18px;
     height: 18px
   }
 }
 
-.benefits__icon img {
+.say__icon img {
   display: block;
   width: 100%;
   height: 100%;
@@ -561,7 +605,7 @@ main {
   object-position: center
 }
 
-.benefits__text {
+.say__text {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
@@ -570,20 +614,20 @@ main {
 }
 
 @media (max-width:600px) {
-  .benefits__text {
+  .say__text {
     font-size: 10px;
     line-height: 10px
   }
 }
 
-.about {
+.clock {
   position: relative;
   z-index: 1;
   max-width: 800px;
   margin: 0 auto
 }
 
-.about__lines {
+.clock__lines {
   position: absolute;
   top: -46px;
   left: -259px;
@@ -592,7 +636,7 @@ main {
 }
 
 @media (max-width:600px) {
-  .about__lines {
+  .clock__lines {
     width: 800px;
     height: 800px;
     left: -200px
@@ -600,12 +644,12 @@ main {
 }
 
 @media (max-width:400px) {
-  .about__lines {
+  .clock__lines {
     top: -100px
   }
 }
 
-.about__lines picture img {
+.clock__lines picture img {
   display: block;
   width: 100%;
   height: 100%;
@@ -615,7 +659,7 @@ main {
   object-position: center
 }
 
-.about__container {
+.clock__container {
   position: relative;
   padding: 0;
   overflow: hidden;
@@ -624,100 +668,100 @@ main {
 }
 
 @media (max-width:600px) {
-  .about__container {
+  .clock__container {
     padding-top: 50px
   }
 }
 
-.about__left {
+.clock__left {
   padding-right: 290px
 }
 
 @media (max-width:600px) {
-  .about__left {
+  .clock__left {
     padding-right: 190px
   }
 }
 
 @media (max-width:470px) {
-  .about__left {
+  .clock__left {
     padding-right: 128px
   }
 }
 
 @media (max-width:350px) {
-  .about__left {
+  .clock__left {
     padding-right: 85px
   }
 }
 
-.about__title {
+.clock__title {
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 33px;
   text-transform: uppercase;
   color: #fff;
-  background-color: #f63f00;
+  background-color: #0004f6;
   padding: 10px 30px
 }
 
 @media (max-width:600px) {
-  .about__title {
+  .clock__title {
     font-size: 24px;
     line-height: 27px
   }
 }
 
 @media (max-width:470px) {
-  .about__title {
+  .clock__title {
     padding: 10px 20px 10px 30px
   }
 }
 
 @media (max-width:380px) {
-  .about__title {
+  .clock__title {
     padding: 5px 10px
   }
 }
 
-.about__title:not(:last-child) {
+.clock__title:not(:last-child) {
   margin-bottom: 32px
 }
 
-.about__list {
+.clock__list {
   padding: 0 30px
 }
 
 @media (max-width:600px) {
-  .about__list {
+  .clock__list {
     padding: 0 50px 0 30px
   }
 }
 
 @media (max-width:470px) {
-  .about__list {
+  .clock__list {
     padding: 0 30px
   }
 }
 
 @media (max-width:380px) {
-  .about__list {
+  .clock__list {
     padding: 0 30px 0 10px
   }
 }
 
 @media (max-width:350px) {
-  .about__list {
+  .clock__list {
     padding: 0 20px 0 10px
   }
 }
 
-.about__list:not(:last-child) {
+.clock__list:not(:last-child) {
   margin-bottom: 49px
 }
 
-.about__item {
+.clock__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -727,7 +771,13 @@ main {
   gap: 15px
 }
 
-.about__item::before {
+@media (max-width:600px) {
+  .clock__item {
+    gap: 10px
+  }
+}
+
+.clock__item::before {
   content: "";
   background-color: #000;
   border-radius: 50%;
@@ -735,14 +785,11 @@ main {
   -ms-flex: 0 0 10px;
   flex: 0 0 10px;
   height: 10px;
-  margin-top: 7px
+  margin-top: 6.5px
 }
 
 @media (max-width:600px) {
-  .about__item {
-    gap: 10px;
-  }
-  .about__item::before {
+  .clock__item::before {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 8px;
     flex: 0 0 8px;
@@ -751,17 +798,17 @@ main {
   }
 }
 
-.about__item:not(:last-child) {
+.clock__item:not(:last-child) {
   margin-bottom: 20px
 }
 
 @media (max-width:600px) {
-  .about__item:not(:last-child) {
+  .clock__item:not(:last-child) {
     margin-bottom: 5px
   }
 }
 
-.about__text {
+.clock__text {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -770,13 +817,13 @@ main {
 }
 
 @media (max-width:600px) {
-  .about__text {
+  .clock__text {
     font-size: 17px;
     line-height: 20px
   }
 }
 
-.about__links {
+.clock__links {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -790,25 +837,25 @@ main {
 }
 
 @media (max-width:600px) {
-  .about__links {
+  .clock__links {
     gap: 10px;
     padding: 0 50px 33px 30px
   }
 }
 
 @media (max-width:470px) {
-  .about__links {
+  .clock__links {
     padding: 0 35px 33px 30px
   }
 }
 
 @media (max-width:380px) {
-  .about__links {
+  .clock__links {
     padding: 0 30px 33px 10px
   }
 }
 
-.about__links-item:nth-child(1) {
+.clock__links-item:nth-child(1) {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 60px;
   flex: 0 0 60px;
@@ -816,7 +863,7 @@ main {
 }
 
 @media (max-width:600px) {
-  .about__links-item:nth-child(1) {
+  .clock__links-item:nth-child(1) {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 40px;
     flex: 0 0 40px;
@@ -824,13 +871,13 @@ main {
   }
 }
 
-.about__links-item:nth-child(1) a {
+.clock__links-item:nth-child(1) a {
   border-radius: 7px;
   overflow: hidden;
   border: 1px solid #fff
 }
 
-.about__links-item:nth-child(2) {
+.clock__links-item:nth-child(2) {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 165px;
   flex: 0 0 165px;
@@ -838,7 +885,7 @@ main {
 }
 
 @media (max-width:600px) {
-  .about__links-item:nth-child(2) {
+  .clock__links-item:nth-child(2) {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 119px;
     flex: 0 0 119px;
@@ -846,13 +893,13 @@ main {
   }
 }
 
-.about__link {
+.clock__link {
   display: block;
   width: 100%;
   height: 100%
 }
 
-.about__link img {
+.clock__link img {
   display: block;
   width: 100%;
   height: 100%;
@@ -862,7 +909,7 @@ main {
   object-position: center
 }
 
-.about__phone {
+.clock__phone {
   position: absolute;
   top: 0;
   right: -60px;
@@ -872,14 +919,14 @@ main {
 }
 
 @media (max-width:600px) {
-  .about__phone {
+  .clock__phone {
     width: 308px;
     height: 537px
   }
 }
 
 @media (max-width:470px) {
-  .about__phone {
+  .clock__phone {
     right: -70px;
     width: 236px;
     height: 445px
@@ -887,12 +934,12 @@ main {
 }
 
 @media (max-width:350px) {
-  .about__phone {
+  .clock__phone {
     right: -120px
   }
 }
 
-.about__phone picture img {
+.clock__phone picture img {
   display: block;
   width: 100%;
   height: 100%;
@@ -903,5 +950,194 @@ main {
 }
 
 .footer {
-  display: none
+  position: relative;
+  z-index: 3;
+  padding: 15px 0;
+  background-color: #0004f6
+}
+
+@media (max-width:600px) {
+  .footer {
+    padding: 8px 0
+  }
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 10px 15px
+}
+
+.footer__link {
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  font-weight: 400;
+  -webkit-transition: color .3s linear;
+  -o-transition: color .3s linear;
+  transition: color .3s linear
+}
+
+@media (max-width:600px) {
+  .footer__link {
+    font-size: 12px;
+    line-height: 15px
+  }
+}
+
+.footer__link:active {
+  color: var(--active);
+  -webkit-transition-duration: .1s;
+  -o-transition-duration: .1s;
+  transition-duration: .1s
+}
+
+.terms {
+  padding-top: 50px;
+  padding-bottom: 50px
+}
+
+@media (max-width:600px) {
+  .terms {
+    padding-top: 30px;
+    padding-bottom: 30px
+  }
+}
+
+.terms h1 {
+  font-size: 18px;
+  line-height: 1.3;
+  color: #000;
+  font-weight: 700
+}
+
+@media (max-width:600px) {
+  .terms h1 {
+    font-size: 16px
+  }
+}
+
+.terms h1:not(:last-child) {
+  margin-bottom: 30px
+}
+
+@media (max-width:991px) {
+  .terms h1:not(:last-child) {
+    margin-bottom: 25x
+  }
+}
+
+@media (max-width:600px) {
+  .terms h1:not(:last-child) {
+    margin-bottom: 20px
+  }
+}
+
+.terms h2 {
+  font-size: 18px;
+  line-height: 1.3;
+  color: #000;
+  font-weight: 700
+}
+
+@media (max-width:600px) {
+  .terms h2 {
+    font-size: 16px
+  }
+}
+
+.terms h2:not(:last-child) {
+  margin-bottom: 30px
+}
+
+@media (max-width:991px) {
+  .terms h2:not(:last-child) {
+    margin-bottom: 25x
+  }
+}
+
+@media (max-width:600px) {
+  .terms h2:not(:last-child) {
+    margin-bottom: 20px
+  }
+}
+
+.terms p {
+  font-size: 16px;
+  line-height: 1.3;
+  color: #000;
+  font-weight: 400
+}
+
+@media (max-width:600px) {
+  .terms p {
+    font-size: 14px
+  }
+}
+
+.terms p:not(:last-child) {
+  margin-bottom: 30px
+}
+
+@media (max-width:991px) {
+  .terms p:not(:last-child) {
+    margin-bottom: 25x
+  }
+}
+
+@media (max-width:600px) {
+  .terms p:not(:last-child) {
+    margin-bottom: 20px
+  }
+}
+
+.terms ul:not(:last-child) {
+  margin-bottom: 30px
+}
+
+@media (max-width:991px) {
+  .terms ul:not(:last-child) {
+    margin-bottom: 25x
+  }
+}
+
+@media (max-width:600px) {
+  .terms ul:not(:last-child) {
+    margin-bottom: 20px
+  }
+}
+
+.terms li {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #000;
+  font-weight: 400
+}
+
+@media (max-width:600px) {
+  .terms li {
+    font-size: 12px
+  }
+}
+
+.terms li:not(:last-child) {
+  margin-bottom: 30px
+}
+
+@media (max-width:991px) {
+  .terms li:not(:last-child) {
+    margin-bottom: 25x
+  }
+}
+
+@media (max-width:600px) {
+  .terms li:not(:last-child) {
+    margin-bottom: 20px
+  }
 }

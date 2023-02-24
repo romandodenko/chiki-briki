@@ -12,167 +12,155 @@
   <link rel="preload" href="./fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./css/main-min.css">
-  <script defer src="./js/main.js"></script>
   <title>Baixe o aplicativo betano</title>
 </head>
 
 <body>
   <div class="page">
-    <header class="header">
-      <div class="container">
-        <a class="logo" target="_blank" href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441">
-          <img src="./img/logo.svg" loading="lazy" width="30" height="30" alt="Logo">
-        </a>
-      </div>
-    </header>
+    <?php
+    include 'header.php';
+    ?>
     <main>
-      <section class="hero">
-        <div class="hero__container container" style="background-image: url(./img/hero.jpg);">
-          <div class="hero__content">
-            <div class="hero__descr">
-              <h1 class="hero__title">
+      <section class="main">
+        <div class="main__container container" style="background-image: url(./img/hero.jpg);">
+          <div class="main__content">
+            <div class="main__descr">
+              <h1 class="main__title">
                 <span>Baixe o aplicativo</span>
                 Betano
               </h1>
-              <a class="hero__link" target="_blank"
-                href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441">
+              <a class="main__link" target="_blank" href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441?<?php echo $_SERVER['QUERY_STRING'];?>">
                 Faça o download agora
               </a>
-              <ul class="hero__list">
-                <li class="hero__item">
-                  <a class="hero__item-link" target="_blank"
-                    href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441">
+              <ul class="main__list">
+                <li class="main__item">
+                  <a class="main__item-link" target="_blank" href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441?<?php echo $_SERVER['QUERY_STRING'];?>">
                     <picture>
                       <source media="(min-width: 320px)" srcset="./img/icon.webp" type="image/webp">
                       <img src="./img/icon.png" loading="lazy" width="30" height="30" alt="Icon">
                     </picture>
                   </a>
                 </li>
-                <li class="hero__item">
-                  <a class="hero__item-link" target="_blank"
-                    href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441">
+                <li class="main__item">
+                  <a class="main__item-link" target="_blank" href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441?<?php echo $_SERVER['QUERY_STRING'];?>">
                     <img src="./img/app.svg" loading="lazy" width="30" height="30" alt="App">
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="hero__vector">
+            <div class="main__vector">
               <img src="./img/hero-v.svg" loading="lazy" width="300" height="300" alt="Image">
             </div>
           </div>
         </div>
       </section>
-      <section class="benefits">
-        <div class="benefits__container container">
-          <ul class="benefits__list">
-            <li class="benefits__item">
-              <div class="benefits__top">
-                <div class="benefits__wrapper-icon"> </div>
-                <span class="benefits__icon">
+      <section class="say">
+        <div class="say__container container">
+          <ul class="say__list">
+            <li class="say__item">
+              <div class="say__top">
+                <div class="say__wrapper-icon"> </div>
+                <span class="say__icon">
                   <img src="./img/icon-1.svg" loading="lazy" width="30" height="30" alt="Icon">
                 </span>
               </div>
-              <p class="benefits__text">
+              <p class="say__text">
                 100% bônus de primeiro depósito
               </p>
             </li>
-            <li class="benefits__item">
-              <div class="benefits__top">
-                <div class="benefits__wrapper-icon"> </div>
-                <span class="benefits__icon">
+            <li class="say__item">
+              <div class="say__top">
+                <div class="say__wrapper-icon"> </div>
+                <span class="say__icon">
                   <img src="./img/icon-2.svg" loading="lazy" width="30" height="30" alt="Icon">
                 </span>
               </div>
-              <p class="benefits__text">
+              <p class="say__text">
                 Registro rápido
               </p>
             </li>
-            <li class="benefits__item">
-              <div class="benefits__top">
-                <div class="benefits__wrapper-icon"> </div>
-                <span class="benefits__icon">
+            <li class="say__item">
+              <div class="say__top">
+                <div class="say__wrapper-icon"> </div>
+                <span class="say__icon">
                   <img src="./img/icon-3.svg" loading="lazy" width="30" height="30" alt="Icon">
                 </span>
               </div>
-              <p class="benefits__text">
+              <p class="say__text">
                 Depósito e saque instantâneo
               </p>
             </li>
           </ul>
         </div>
       </section>
-      <section class="about">
-        <div class="about__container container">
-          <div class="about__left">
-            <h2 class="about__title">
+      <section class="clock">
+        <div class="clock__container container">
+          <div class="clock__left">
+            <h2 class="clock__title">
               APOSTE NA
               SUA EMOÇÕES
             </h2>
-            <ul class="about__list">
-              <li class="about__item">
-                <p class="about__text">
+            <ul class="clock__list">
+              <li class="clock__item">
+                <p class="clock__text">
                   SUPER ODDS
                 </p>
               </li>
-              <li class="about__item">
-                <p class="about__text">
+              <li class="clock__item">
+                <p class="clock__text">
                   MATCH COMBO
                 </p>
               </li>
-              <li class="about__item">
-                <p class="about__text">
+              <li class="clock__item">
+                <p class="clock__text">
                   JOGOS AO VIVO
                 </p>
               </li>
-              <li class="about__item">
-                <p class="about__text">
+              <li class="clock__item">
+                <p class="clock__text">
                   SAQUE E DEPÓSITO VIA PIX
                 </p>
               </li>
-              <li class="about__item">
-                <p class="about__text">
+              <li class="clock__item">
+                <p class="clock__text">
                   E MUITO MAIS
                 </p>
               </li>
             </ul>
-            <ul class="about__links">
-              <li class="about__links-item">
-                <a class="about__link" target="_blank"
-                  href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441">
+            <ul class="clock__links">
+              <li class="clock__links-item">
+                <a class="clock__link" target="_blank" href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441?<?php echo $_SERVER['QUERY_STRING'];?>">
                   <picture>
                     <source media="(min-width: 320px)" srcset="./img/icon.webp" type="image/webp">
                     <img src="./img/icon.png" loading="lazy" width="30" height="30" alt="Icon">
                   </picture>
                 </a>
               </li>
-              <li class="about__links-item">
-                <a class="about__link" target="_blank"
-                  href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441">
+              <li class="clock__links-item">
+                <a class="clock__link" target="_blank" href="https://apps.apple.com/ru/app/betano-football-quiz/id1670907441?<?php echo $_SERVER['QUERY_STRING'];?>">
                   <img src="./img/app.svg" loading="lazy" width="30" height="30" alt="App">
                 </a>
               </li>
             </ul>
           </div>
-          <div class="about__phone">
+          <div class="clock__phone">
             <picture>
               <source media="(min-width: 320px)" srcset="./img/mobile.webp" type="image/webp">
               <img src="./img/mobile.png" loading="lazy" width="300" height="300" alt="Phone">
             </picture>
           </div>
         </div>
-        <div class="about__lines">
+        <div class="clock__lines">
           <picture>
-            <source media="(min-width: 320px)" srcset="./img/lines.webp" type="image/webp">
-            <img src="./img/lines.png" loading="lazy" width="300" height="300" alt="Lines">
+          <source media="(min-width: 320px)" srcset="./img/lines.webp" type="image/webp">
+          <img src="./img/lines.png" loading="lazy" width="300" height="300" alt="Lines">
           </picture>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__container container">
-
-      </div>
-    </footer>
+    <?php
+    include 'footer.php';
+    ?>
   </div>
 </body>
 
