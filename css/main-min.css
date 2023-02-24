@@ -735,15 +735,19 @@ main {
   -ms-flex: 0 0 10px;
   flex: 0 0 10px;
   height: 10px;
-  margin-top: 11px
+  margin-top: 7px
 }
 
 @media (max-width:600px) {
+  .about__item {
+    gap: 10px;
+  }
   .about__item::before {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 8px;
     flex: 0 0 8px;
-    height: 8px
+    height: 8px;
+    margin-top: 5.5px
   }
 }
 
