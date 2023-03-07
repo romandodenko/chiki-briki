@@ -2,6 +2,16 @@
 
 window.onload = function () {
 
+  // Даём id всем урокам ( lessons__item )
+
+  document.querySelectorAll(".lessons__item").forEach(function (e, i) {
+
+    let index = i + 1;
+
+    e.setAttribute("id", `lesson-item-${index}`);
+
+  })
+
   // Открытие и закрытие бургера
 
   const menu = document.querySelector(".header__menu");
@@ -22,9 +32,13 @@ window.onload = function () {
       menu.classList.remove("menu-active")
       document.body.style.overflow = "";
     }
-    if (elementInteractive.closest(".lessons__button")) {
+    if (elementInteractive.closest(".lessons__button")) { // открытие и закрытие элементов
 
       if (!elementInteractive.closest(".lessons__button").classList.contains("button-interactive")) {
+
+        document.querySelectorAll(".lessons__button").forEach(function (e) {
+          e.removeAttribute("href")
+        })
 
         elementInteractive.closest(".lessons__button").classList.add("button-interactive");
 
@@ -33,6 +47,21 @@ window.onload = function () {
         elementInteractive.closest(".lessons__item").querySelector(".lessons__content").style.height = elementInteractive.closest(".lessons__item").querySelector(".lessons__content").scrollHeight + "px";
 
       } else {
+
+        let nextElement = elementInteractive.closest(".lessons__item").nextElementSibling;
+
+        if (nextElement) {
+
+          let nextElementId = nextElement.getAttribute("id");
+
+          elementInteractive.closest(".lessons__button").setAttribute("href", `#${nextElementId}`);
+
+        } else {
+
+          let nextElementIds = elementInteractive.closest(".lessons__item").getAttribute("id");
+
+          elementInteractive.closest(".lessons__button").setAttribute("href", `#${nextElementIds}`);
+        }
 
         elementInteractive.closest(".lessons__button").classList.remove("button-interactive");
 
@@ -43,7 +72,15 @@ window.onload = function () {
       }
 
     }
+    if (elementInteractive.closest(".lessons__video")) { // взаимодействие с видео
 
+      elementInteractive.closest(".lessons__video").classList.add("video-play");
+
+      let lessonsVideo = elementInteractive.closest(".lessons__video").querySelector(".lessons__video video");
+
+      lessonsVideo.setAttribute("controls", "controls");
+
+    }
   })
 
   // Проверка на поддержку webp
