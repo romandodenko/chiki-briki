@@ -129,4 +129,20 @@ window.onload = function () {
     });
   });
 
+  let observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        if (entry.target.querySelector(".lessons__video video")) {
+          entry.target.querySelector(".lessons__video video").style.display = "block";
+        }
+      }
+    })
+  }, {
+    threshold: 0,
+  })
+
+  document.querySelectorAll(".lessons__item").forEach(function (e) {
+    observer.observe(e)
+  })
+
 }

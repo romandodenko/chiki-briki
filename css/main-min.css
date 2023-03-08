@@ -948,7 +948,7 @@ main {
 }
 
 .lessons__video video {
-  display: block;
+  display: none;
   width: 100%;
   height: 100%;
   -o-object-position: top;
