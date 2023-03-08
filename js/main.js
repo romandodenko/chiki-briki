@@ -20,6 +20,20 @@ window.onload = function () {
 
     const elementInteractive = e.target;
 
+    if (elementInteractive.closest(".wrapper-button__button")) { // Открытие и закрытие бургера
+      document.querySelector(".wrapper-form").classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+    if (elementInteractive.closest(".wrapper-form__close")) { // Открытие и закрытие бургера
+      document.querySelector(".wrapper-form").classList.remove("active");
+      document.querySelector(".wrapper-form").classList.remove("change-el");
+      document.body.style.overflow = "";
+    }
+    if (elementInteractive.closest(".wrapper-form__exit")) { // Открытие и закрытие бургера
+      document.querySelector(".wrapper-form").classList.remove("active");
+      document.querySelector(".wrapper-form").classList.remove("change-el");
+      document.body.style.overflow = "";
+    }
     if (elementInteractive.closest(".burger")) { // Открытие и закрытие бургера
       menu.classList.add("menu-active")
       document.body.style.overflow = "hidden";
@@ -129,6 +143,8 @@ window.onload = function () {
     });
   });
 
+  // Скрипт для того чтобы дать дисплей блок видео
+
   let observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
@@ -144,5 +160,82 @@ window.onload = function () {
   document.querySelectorAll(".lessons__item").forEach(function (e) {
     observer.observe(e)
   })
+
+  // Валидация
+
+  const validator = new JustValidate('.form', { // можно использовать классы вместо ид
+
+    errorLabelStyle: { // Стили для ошибки
+      color: '#F13F58',
+    }
+
+  });
+
+  validator
+    .addField('#name', [{ // можно использовать классы вместо ид
+        rule: 'required',
+        errorMessage: 'Введите ваше имя!',
+      },
+      {
+        rule: 'minLength',
+        value: 1,
+        errorMessage: 'Минимальное количество букв - 1!',
+      },
+    ])
+    .addField('#email', [{ // можно использовать классы вместо ид
+        rule: 'required',
+        errorMessage: 'Введите вашу почту!',
+      },
+
+      {
+        rule: 'email',
+        errorMessage: 'Почта введена не правильно!',
+      },
+    ])
+    .onSuccess((event) => { // Если форма проходит валидацию то происходит код ниже
+      const form = document.querySelector(".form"); // форма
+      // const requestUrl = "https://jsonplaceholder.typicode.com/users"; Когда будешь делать и если вдруг что-то не так пойдет, то вставишь эту ссылку, чтобы проверить работает всё или нет
+      const requestUrl = "../send.php"; // Для проверки работает всё или нет, выступает в качестве сервера
+
+      function sendRequest(method, url, body = null) {
+        const headers = {
+          'Content-Type': 'application/json',
+        };
+
+        return fetch(url, {
+          method: method,
+          body: JSON.stringify(body),
+          headers: headers,
+        }).then(response => {
+          if (response.ok) {
+            return response.json()
+          } else {
+            console.log("Ошибка")
+          }
+        })
+
+      }
+
+      const body = { // то что передается
+        userName: form.querySelector(".name-input").value,
+        userEmail: form.querySelector(".email-input").value,
+        userCommentary: form.querySelector(".commentary").value,
+      }
+
+      sendRequest("POST", requestUrl, body)
+        .then(data => console.log(data))
+        .catch(err => console.log(err))
+
+      document.body.style.overflow = "";
+
+      document.querySelector(".wrapper-form").classList.add("change-el");
+
+      form.querySelectorAll(".form__input").forEach(function (e) {
+        e.value = "";
+      });
+
+      form.querySelector(".form__textarea").value = "";
+
+    })
 
 }

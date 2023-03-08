@@ -12,6 +12,7 @@
   <link rel="preload" href="./fonts/Montserrat-Black.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./css/main-min.css">
+  <script src="./resources/validate/new/just-validate.min.js"></script>
   <script defer src="./js/main.js"></script>
   <title>Зарабатывайте реальные деньги на ставках</title>
 </head>
@@ -35,12 +36,12 @@
               </li>
               <li class="nav__item">
                 <a class="nav__link link-anchor link-nav" href="#video" aria-label="Видео">
-                  Видео
+                  Видео уроки
                 </a>
               </li>
               <li class="nav__item">
                 <a class="nav__link link-anchor link-nav" href="#bookmekers" aria-label="Лучшие букмекеры">
-                  Лучшие букмекеры
+                  Инструменты для заработка
                 </a>
               </li>
             </ul>
@@ -50,18 +51,55 @@
       </div>
     </header>
     <main>
+      <section class="wrapper-button">
+        <button class="wrapper-button__button">
+          <img src="./img/interactive.svg" loading="lazy" width="30" height="30" alt="Иконка">
+        </button>
+      </section>
+      <section class="wrapper-form">
+        <div class="wrapper-form__close"></div>
+        <div class="wrapper-form__body">
+          <form class="wrapper-form__form form" action="#!" name="form" autocomplete="on"
+            aria-label="Форма обратной связи">
+            <h2 class="form__title">
+              Пишите если у вас остались вопросы
+            </h2>
+            <label class="form__label" for="name">
+              <input class="form__input name-input" type="text" name="name" id="name" placeholder="Имя..."
+                aria-label="Введите ваше имя">
+            </label>
+            <label class="form__label" for="email">
+              <input class="form__input email-input" type="email" name="email" id="email" placeholder="Email..."
+                aria-label="Введите вашу почту">
+            </label>
+            <textarea class="form__textarea commentary" name="commentary" id="commentary" placeholder="Сообщение..."
+              aria-label="Введите ваш комментарий"></textarea>
+            <button class="form__button" type="submit" aria-label="Отправить форму">Отправить</button>
+          </form>
+          <div class="wrapper-form__okay">
+            <h3 class="wrapper-form__title">
+              Спасибо за обращение, мы с вами обязательно свяжемся!
+            </h3>
+          </div>
+          <button class="wrapper-form__exit" aria-label="Закрыть форму">
+            <span></span>
+          </button>
+        </div>
+      </section>
       <section class="hero">
         <div class="hero__container container">
           <div class="hero__descr">
             <h1 class="hero__title">
-              <span>Делайте ставки и выигрывайте вместе с нами!</span>
-              Зарабатывайте реальные деньги на ставках
+              <span>Пройди обучение и начни зарабатывать уже сегодня!</span>
+              Зарабатывай от 1000$ в месяц на спортивных событиях онлайн!
             </h1>
-            <a class="hero__link link-anchor link-v1" href="#video">
+            <a class="hero__link link-anchor link-v1" href="#video" aria-label="Начать обучение">
               Начать обучение
-              <svg width="14" height="18">
-                <use xlink:href="./img/svg/sprites.svg#arrow-h"></use>
-              </svg>
+              <span>
+                <svg width="14" height="18">
+                  <use xlink:href="./img/svg/sprites.svg#arrow-h"></use>
+                </svg>
+              </span>
             </a>
           </div>
         </div>
@@ -72,12 +110,13 @@
             Видео уроки
           </h2>
           <h3 class="lessons__sub-title title-v3">
-            Научитесь правильно зарабатывать
+            Внимательно изучите стратегию - это приведет вас желаемому результату!
           </h3>
           <ul class="lessons__list" aria-label="Список уроков">
             <li class="lessons__item">
               <h4 class="lessons__mini-title title-v4">
-                Урок 1
+                <span>Урок 1.</span>
+                Необходимые инструменты для вашего заработка
               </h4>
               <div class="lessons__video">
                 <video src="./video/video-1.mp4" preload="metadata" poster="./img/poster-video-1.webp" muted width="100"
@@ -101,7 +140,7 @@
                   <h5 class="lessons__submini-title title-v5">
                     Вот список букмекерских компаний, которые хуже всего защищены от нашей стратегии:
                   </h5>
-                  <ul class="lessons__sublist">
+                  <ul class="lessons__sublist" aria-label="Список букмекеров">
                     <li class="lessons__subitem">
                       <p class="lessons__text lessons__text_underline text-v1">
                         Букмекер 1
@@ -128,7 +167,7 @@
                   <h5 class="lessons__submini-title title-v5">
                     Рекомендации:
                   </h5>
-                  <ul class="lessons__sublist lessons__sublist_2">
+                  <ul class="lessons__sublist lessons__sublist_2" aria-label="Информация">
                     <li class="lessons__subitem">
                       <p class="lessons__text text-v1">
                         Размер ставки не должен превышать 10% банка на счету одной букмекерской компании
@@ -162,7 +201,7 @@
                   </ul>
                 </div>
               </div>
-              <a class="lessons__button link-v2">
+              <a class="lessons__button link-v2" aria-label="Читать далее">
                 <span class="span-1">Читать далее</span>
                 <span class="span-2">Свернуть</span>
                 <svg width="17" height="7">
@@ -172,7 +211,7 @@
             </li>
             <li class="lessons__item">
               <h4 class="lessons__mini-title title-v4">
-                Урок 2
+                <span>Урок 2.</span> Таблицы
               </h4>
               <div class="lessons__video">
                 <video src="./video/video-2.mp4" preload="metadata" poster="./img/poster-video-2.webp" muted width="100"
@@ -1866,7 +1905,7 @@
                   </div>
                 </div>
               </div>
-              <a class="lessons__button link-v2" href="#lesson-item-3">
+              <a class="lessons__button link-v2" href="#lesson-item-3" aria-label="Читать далее">
                 <span class="span-1">Читать далее</span>
                 <span class="span-2">Свернуть</span>
                 <svg width="17" height="7">
@@ -1876,7 +1915,7 @@
             </li>
             <li class="lessons__item">
               <h4 class="lessons__mini-title title-v4">
-                Урок 3
+                <span>Урок 3.</span> Пример использования таблиц
               </h4>
               <div class="lessons__video">
                 <video src="./video/video-3.mp4" preload="metadata" poster="./img/poster-video-3.webp" muted width="100"
@@ -1906,7 +1945,7 @@
             </li>
             <li class="lessons__item">
               <h4 class="lessons__mini-title title-v4">
-                Урок 4
+                <span>Урок 4.</span> Заработок на баскетболе
               </h4>
               <div class="lessons__video">
                 <video src="./video/video-4.mp4" preload="metadata" poster="./img/poster-video-4.webp" muted width="100"
@@ -1940,7 +1979,7 @@
             </li>
             <li class="lessons__item">
               <h4 class="lessons__mini-title title-v4">
-                Урок 5
+                <span>Урок 5.</span> Заработок на футболе
               </h4>
               <div class="lessons__video">
                 <video src="./video/video-5.mp4" preload="metadata" poster="./img/poster-video-5.webp" muted width="100"
@@ -1975,7 +2014,7 @@
                   </p>
                 </div>
               </div>
-              <a class="lessons__button link-v2" href="#lesson-item-6">
+              <a class="lessons__button link-v2" href="#lesson-item-6" aria-label="Читать далее">
                 <span class="span-1">Читать далее</span>
                 <span class="span-2">Свернуть</span>
                 <svg width="17" height="7">
@@ -1985,7 +2024,7 @@
             </li>
             <li class="lessons__item">
               <h4 class="lessons__mini-title title-v4">
-                Урок 6
+                <span>Урок 6.</span> Подведение итогов
               </h4>
               <div class="lessons__video">
                 <video src="./video/video-6.mp4" preload="metadata" poster="./img/poster-video-6.webp" muted width="100"
@@ -2013,15 +2052,44 @@
           </ul>
         </div>
       </section>
+      <section class="table-download">
+        <div class="container">
+          <h2 class="table-download__title title-v2">
+            Материалы
+          </h2>
+          <ul class="table-download__files" aria-label="Список таблик">
+            <li class="table-download__file">
+              <h3 class="table-download__subtitle">
+                Вилочная таблица
+              </h3>
+              <a class="table-download__file-link link-v2" download href="./file/Таблица-1.pdf" aria-label="Скачать таблицу">
+                Скачать
+              </a>
+            </li>
+            <li class="table-download__file">
+              <h3 class="table-download__subtitle">
+                Цветная таблица
+              </h3>
+              <a class="table-download__file-link link-v2" download href="./file/Таблица-2.pdf" aria-label="Скачать таблицу">
+                Скачать
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section class="best" id="bookmekers">
         <div class="container">
           <h2 class="best__title title-v2">
-            Лучшие букмекеры
+            Инструменты для заработка
           </h2>
+          <h3 class="best__title-2">
+            Мы отбирали на протяжении нескольких лет тех букмекеров, на которых с легкостью можно зарабатывать с помощью
+            нашей стратегии!
+          </h3>
           <ul class="best__list" aria-label="Список учших букмекеров">
             <li class="best__item">
               <div class="best__image">
-                <a href="#!">
+                <a href="#!" aria-label="Букмекер">
                   <picture>
                     <source media="(min-width: 320px)" srcset="./img/bookmekers.webp" type="image/webp">
                     <img src="./img/bookmekers.png" loading="lazy" width="162" height="160" alt="Bookmekers">
@@ -2029,14 +2097,14 @@
                 </a>
               </div>
               <div class="best__descr">
-                <a class="best__name" href="#!">
+                <a class="best__name" href="#!" aria-label="Букмекер">
                   Name
                 </a>
                 <div class="best__wrapper-payments">
-                  <h3 class="best__subtitle">
+                  <h4 class="best__subtitle">
                     Payment systems
-                  </h3>
-                  <ul class="best__payments">
+                  </h4>
+                  <ul class="best__payments" aria-label="Список оплаты">
                     <li class="best__paymet">
                       <picture>
                         <source media="(min-width: 320px)" srcset="./img/pay.webp" type="image/webp">
@@ -2106,7 +2174,7 @@
             </li>
             <li class="best__item">
               <div class="best__image">
-                <a href="#!">
+                <a href="#!" aria-label="Букмекер">
                   <picture>
                     <source media="(min-width: 320px)" srcset="./img/bookmekers.webp" type="image/webp">
                     <img src="./img/bookmekers.png" loading="lazy" width="162" height="160" alt="Bookmekers">
@@ -2114,14 +2182,14 @@
                 </a>
               </div>
               <div class="best__descr">
-                <a class="best__name" href="#!">
+                <a class="best__name" href="#!" aria-label="Букмекер">
                   Name
                 </a>
                 <div class="best__wrapper-payments">
-                  <h3 class="best__subtitle">
+                  <h4 class="best__subtitle">
                     Payment systems
-                  </h3>
-                  <ul class="best__payments">
+                  </h4>
+                  <ul class="best__payments" aria-label="Список оплаты">
                     <li class="best__paymet">
                       <picture>
                         <source media="(min-width: 320px)" srcset="./img/pay.webp" type="image/webp">
@@ -2191,7 +2259,7 @@
             </li>
             <li class="best__item">
               <div class="best__image">
-                <a href="#!">
+                <a href="#!" aria-label="Букмекер">
                   <picture>
                     <source media="(min-width: 320px)" srcset="./img/bookmekers.webp" type="image/webp">
                     <img src="./img/bookmekers.png" loading="lazy" width="162" height="160" alt="Bookmekers">
@@ -2199,14 +2267,14 @@
                 </a>
               </div>
               <div class="best__descr">
-                <a class="best__name" href="#!">
+                <a class="best__name" href="#!" aria-label="Букмекер">
                   Name
                 </a>
                 <div class="best__wrapper-payments">
-                  <h3 class="best__subtitle">
+                  <h4 class="best__subtitle">
                     Payment systems
-                  </h3>
-                  <ul class="best__payments">
+                  </h4>
+                  <ul class="best__payments" aria-label="Список оплаты">
                     <li class="best__paymet">
                       <picture>
                         <source media="(min-width: 320px)" srcset="./img/pay.webp" type="image/webp">
@@ -2276,7 +2344,7 @@
             </li>
             <li class="best__item">
               <div class="best__image">
-                <a href="#!">
+                <a href="#!" aria-label="Букмекер">
                   <picture>
                     <source media="(min-width: 320px)" srcset="./img/bookmekers.webp" type="image/webp">
                     <img src="./img/bookmekers.png" loading="lazy" width="162" height="160" alt="Bookmekers">
@@ -2284,14 +2352,14 @@
                 </a>
               </div>
               <div class="best__descr">
-                <a class="best__name" href="#!">
+                <a class="best__name" href="#!" aria-label="Букмекер">
                   Name
                 </a>
                 <div class="best__wrapper-payments">
-                  <h3 class="best__subtitle">
+                  <h4 class="best__subtitle">
                     Payment systems
-                  </h3>
-                  <ul class="best__payments">
+                  </h4>
+                  <ul class="best__payments" aria-label="Список оплаты">
                     <li class="best__paymet">
                       <picture>
                         <source media="(min-width: 320px)" srcset="./img/pay.webp" type="image/webp">
@@ -2361,7 +2429,7 @@
             </li>
             <li class="best__item">
               <div class="best__image">
-                <a href="#!">
+                <a href="#!" aria-label="Букмекер">
                   <picture>
                     <source media="(min-width: 320px)" srcset="./img/bookmekers.webp" type="image/webp">
                     <img src="./img/bookmekers.png" loading="lazy" width="162" height="160" alt="Bookmekers">
@@ -2369,14 +2437,14 @@
                 </a>
               </div>
               <div class="best__descr">
-                <a class="best__name" href="#!">
+                <a class="best__name" href="#!" aria-label="Букмекер">
                   Name
                 </a>
                 <div class="best__wrapper-payments">
-                  <h3 class="best__subtitle">
+                  <h4 class="best__subtitle">
                     Payment systems
-                  </h3>
-                  <ul class="best__payments">
+                  </h4>
+                  <ul class="best__payments" aria-label="Список оплаты">
                     <li class="best__paymet">
                       <picture>
                         <source media="(min-width: 320px)" srcset="./img/pay.webp" type="image/webp">
@@ -2446,7 +2514,7 @@
             </li>
             <li class="best__item">
               <div class="best__image">
-                <a href="#!">
+                <a href="#!" aria-label="Букмекер">
                   <picture>
                     <source media="(min-width: 320px)" srcset="./img/bookmekers.webp" type="image/webp">
                     <img src="./img/bookmekers.png" loading="lazy" width="162" height="160" alt="Bookmekers">
@@ -2454,14 +2522,14 @@
                 </a>
               </div>
               <div class="best__descr">
-                <a class="best__name" href="#!">
+                <a class="best__name" href="#!" aria-label="Букмекер">
                   Name
                 </a>
                 <div class="best__wrapper-payments">
-                  <h3 class="best__subtitle">
+                  <h4 class="best__subtitle">
                     Payment systems
-                  </h3>
-                  <ul class="best__payments">
+                  </h4>
+                  <ul class="best__payments" aria-label="Список оплаты">
                     <li class="best__paymet">
                       <picture>
                         <source media="(min-width: 320px)" srcset="./img/pay.webp" type="image/webp">
@@ -2536,12 +2604,13 @@
         <div class="container">
           <div class="help__content">
             <h2 class="help__title">
-              Поддержите проект
+              Поддержите проект.
             </h2>
             <p class="help__text">
-              У вас получилось заработать? Отблагодарите авторов и вы поможете проекту
+              У вас получилось заработать? Отблагодарите авторов и вы поможете проекту для развития и создания новых
+              материалов.
             </p>
-            <a class="help__link" href="#!">
+            <a class="help__link" href="#!" aria-label="Донат">
               Донат
             </a>
             <p class="help__text help__text_2">
@@ -2565,7 +2634,7 @@
         <h2 class="footer__title">
           Если возникли вопросы обращайтесь
         </h2>
-        <a class="footer__link" href="mailto:pochta@gmail.com">
+        <a class="footer__link" href="mailto:pochta@gmail.com" aria-label="Почта">
           <svg width="24" height="24">
             <use xlink:href="./img/svg/sprites.svg#mail"></use>
           </svg>
